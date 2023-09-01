@@ -46,7 +46,7 @@ params:
 
     footer:
         since: 2023
-        customText:
+        customText: 123
 
     dateFormat:
         published: Jan 02, 2006

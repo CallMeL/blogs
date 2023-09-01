@@ -20,7 +20,7 @@ weight: 1       # You can add weight to some posts to override the default sorti
 
 我非常赞同没有记录就没有发生这句话。长毛象和instagram分别是我文字和图片的记录仓库。在长毛象上的记录好处是随时随地更新，比较随意，但是有时候字数打满了也无法把自己的思绪缕清，以及会担心自己这样内容的嘟文出现在别人的时间线上是不是一种打扰（讨好型人格的苦恼）。instagram对我则是一种易分享的图片网盘，发几条storiy之后分类到主页，没有什么调理。这样看来博客应该是记录的最优解。
 
-## 标签的规划
+## 分类的规划
 * 装修记录：
 虽然有说法是博客的精美程度和写的多少成反比，但是还是想给我的小岛简单装饰一下。比如加上评论，浏览记录，背景音乐。以及博客的英文版也会派上日程。
 * 又在看啥：
@@ -30,8 +30,15 @@ weight: 1       # You can add weight to some posts to override the default sorti
 * 煮点好的：
 这个标签会记录做饭，暑假捣鼓了很久厨房，拿得出手的菜也不是没有，有个标签记录会更方便。之后全靠自己煮饭，能记录的东西应该很多。
 * 没有相机：
-这个标签主要是照片墙，标签取这个名字是因为真的很想要相机（哭闹）
-* 经验分享
+这个标签主要是照片墙+游记，标签取这个名字是因为真的很想要相机（哭闹）
+* 经验分享：
 万金油的标签，可能什么都会有。最近的规划是把德国留学申请入门搬过来。
+* 碎碎念：
+一些无法分类的，只会发一次的内容，大多是关于我自己。比如这一篇。
 
 > Photo by me on iPhone 12, Majiang with friends
+
+<!-- ![名称](https://count.getloli.com/get/@:name?theme=asoul) # md格式
+
+<img src="https://count.getloli.com/get/@:name?theme=asoul" alt=":name" />  #Img标签
+ -->

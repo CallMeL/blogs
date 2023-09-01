@@ -6,7 +6,7 @@ favicon = "img/fav.jpeg"
 
 [footer]
 since = 2023
-customText = ""
+customText = "页脚怎么改不过来"
 
 [dateFormat]
 published = "Jan 02, 2006"
