@@ -6,7 +6,7 @@ title = "潮边"
 
 # Theme i18n support
 # Available values: en, fr, id, ja, ko, pt-br, zh-cn, zh-tw, es, de, nl, it, th, el, uk, ar
-defaultContentLanguage = "en"
+defaultContentLanguage = "zh-cn"
 
 # Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
 # This will make .Summary and .WordCount behave correctly for CJK languages.
@@ -20,3 +20,17 @@ disqusShortname = "hugo-theme-stack"
     category = "categories"
 [params]
   page_view_conter = true
+  
+[comments]
+    enabled = true
+    provider = "waline"
+
+[comments.waline]
+    serverURL = "https://blog-comments-murc60bpk-callmel.vercel.app"
+    lang = "zh-CN"
+    visitor = false
+    emoji = [ "https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo" ]
+    requiredMeta = [ "name", "email", "url" ]
+
+[comments.waline.locale]
+    admin = "潮边"
