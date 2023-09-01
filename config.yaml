@@ -3,7 +3,7 @@ languageCode: zh-cn
 theme: hugo-theme-stack
 paginate: 5
 title: 潮边
-copyright: Example Person
+copyright: 潮潮
 
 languages:
     # en:
@@ -72,36 +72,12 @@ params:
         enabled: true
         provider: waline
 
-        disqusjs:
-            shortname:
-            apiUrl:
-            apiKey:
-            admin:
-            adminLabel:
-
-        utterances:
-            repo:
-            issueTerm: pathname
-            label:
-
-        remark42:
-            host:
-            site:
-            locale:
-
-        vssue:
-            platform:
-            owner:
-            repo:
-            clientId:
-            clientSecret:
-            autoCreateIssue: false
-
         # Waline client configuration see: https://waline.js.org/en/reference/component.html
+                # Waline client configuration see: https://waline.js.org/en/reference/client.html
         waline:
             serverURL: https://blog-comments-murc60bpk-callmel.vercel.app
             lang: zh-CN
-            pageview:
+            visitor: false
             emoji:
                 - https://unpkg.com/@waline/emojis@1.0.1/weibo
             requiredMeta:
@@ -112,34 +88,6 @@ params:
                 admin: 潮潮
                 placeholder:
 
-
-        # See https://cactus.chat/docs/reference/web-client/#configuration for description of the various options
-        cactus:
-            defaultHomeserverUrl: "https://matrix.cactus.chat:8448"
-            serverName: "cactus.chat"
-            siteName: "" # You must insert a unique identifier here matching the one you registered (See https://cactus.chat/docs/getting-started/quick-start/#register-your-site)
-
-        giscus:
-            repo:
-            repoID:
-            category:
-            categoryID:
-            mapping:
-            lightTheme:
-            darkTheme:
-            reactionsEnabled: 1
-            emitMetadata: 0
-
-        gitalk:
-            owner:
-            admin:
-            repo:
-            clientID:
-            clientSecret:
-
-        cusdis:
-            host:
-            id:
     widgets:
         homepage:
             - type: search

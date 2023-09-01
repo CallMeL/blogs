@@ -21,16 +21,4 @@ disqusShortname = "hugo-theme-stack"
 [params]
   page_view_conter = true
   
-[comments]
-    enabled = true
-    provider = "waline"
 
-[comments.waline]
-    serverURL = "https://blog-comments-murc60bpk-callmel.vercel.app"
-    lang = "zh-CN"
-    visitor = false
-    emoji = [ "https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo" ]
-    requiredMeta = [ "name", "email", "url" ]
-
-[comments.waline.locale]
-    admin = "潮边"

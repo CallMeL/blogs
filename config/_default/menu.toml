@@ -8,12 +8,12 @@
 #newtab = true
 
 [[social]]
-identifier = "mail"
-name = "Mail"
-url = "https://mail.com"
+identifier = "rss"
+name = "RSS"
+url = "https://blog.hannahlin.me/index.xml"
 
 [social.params]
-icon = "mail"
+icon = "rss"
 
 [[social]]
 identifier = "mastodon"
