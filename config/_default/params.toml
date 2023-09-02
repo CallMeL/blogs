@@ -83,7 +83,7 @@ provider = "waline"
 [comments.waline]
 serverURL = "https://blog-comments-murc60bpk-callmel.vercel.app"
 lang = "zh-CN"
-visitor = false
+visitor = true
 avatar = ""
 emoji = ["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"]
 requiredMeta = ["name", "email"]
