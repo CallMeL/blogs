@@ -22,7 +22,6 @@
         </h3>
         {{ end }}
     </div>
-
     {{ $showReadingTime := .Params.readingTime | default (.Site.Params.article.readingTime) }}
     {{ $showDate := not .Date.IsZero }}
     {{ $showFooter := or $showDate $showReadingTime }}
@@ -41,7 +40,9 @@
             <div>
                 {{ partial "helper/icon" "clock" }}
                 <time class="article-time--reading">
+                    {{ .WordCount }}字
                     {{ T "article.readingTime" .ReadingTime }}
+                   
                 </time>
             </div>
         {{ end }}

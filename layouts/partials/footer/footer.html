@@ -24,17 +24,17 @@
 
     <!-- Add blog running time -->
 <!-- Add blog running time -->
-<section class="running-time">
-    本博客已稳定运行
-<span id="runningdays" class="running-days"></span>
+<section class="myfooter">
+    已诞生 🎂
+<span id="runningdays" class="myfooter"></span>
 </section>
 
-<span class="running-days">
+<span class="myfooter">
     <span id="busuanzi_container_site_pv" >
-        访问量👀<span id="busuanzi_value_site_pv"></span>
+        访问量 👀 <span id="busuanzi_value_site_pv"></span>
     </span>
     <span id="busuanzi_container_site_uv">
-        ；访客数🧶<span id="busuanzi_value_site_uv"></span>
+        · 访客数 🧶 <span id="busuanzi_value_site_uv"></span>
       </span>
 </span>
 
@@ -42,12 +42,12 @@
     
 
     <!-- Add total page and word count time -->
-<section class="totalcount">
+<section class="myfooter">
     {{$scratch := newScratch}}
     {{ range (where .Site.Pages "Kind" "page" )}}
         {{$scratch.Add "total" .WordCount}}
     {{ end }}
-    发表了{{ len (where .Site.RegularPages "Section" "post") }}篇文章 · 
-    总计{{ div ($scratch.Get "total") 1000.0 | lang.FormatNumber 2 }}k字
+    发表文章 📝 {{ len (where .Site.RegularPages "Section" "post") }} · 
+    总字数 🖌 {{ div ($scratch.Get "total") 1000.0 | lang.FormatNumber 2 }}k
 </section>
 </footer>
