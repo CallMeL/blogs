@@ -13,7 +13,7 @@
             {{ . | safeHTML }} <br/>
         {{ end }}
 
-        {{- $Generator := `<a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo12</a>` -}}
+        {{- $Generator := `<a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>` -}}
         {{- $Theme := printf `<b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="%s">Stack</a></b>` $ThemeVersion -}}
         {{- $DesignedBy := `<a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>` -}}
 
@@ -23,7 +23,21 @@
 
 
     <!-- Add blog running time -->
-
+<!-- Add blog running time -->
+<section class="running-time">
+    本博客已稳定运行
+<span id="runningdays" class="running-days"></span>
+</section>
+<i class="powerby">
+    <span id="busuanzi_container_site_pv">
+        访问量&nbsp;-&nbsp;<span id="busuanzi_value_site_pv"></span>
+    </span>&nbsp;
+    <span id="busuanzi_container_site_uv">
+        访客数&nbsp;-&nbsp;<span id="busuanzi_value_site_uv"></span>人次
+      </span>
+    </i>
+    
+    
 
     <!-- Add total page and word count time -->
 <section class="totalcount">
