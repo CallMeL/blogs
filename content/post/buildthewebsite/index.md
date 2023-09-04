@@ -1,6 +1,6 @@
 ---
 title: "如何利用Hugo部署一个博客，比泡好杯面还快"
-description: 利用Stack主题
+description: 利用Stack主题的模版部署
 date: 2023-09-04T17:59:10+08:00
 image: 
 math: 
