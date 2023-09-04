@@ -20,7 +20,7 @@ disqusShortname = "hugo-theme-stack"
     category = "categories"
 [params]
   page_view_conter = true
-  favicon = "img/avatar.jpeg"
+  favicon = "/fav.jpeg"
 
 
   
