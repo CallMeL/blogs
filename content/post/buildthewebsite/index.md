@@ -6,7 +6,7 @@ image:
 math: 
 license: 
 comments: true
-draft: false
+draft: true
 categories:
     - 装修记录
 tags: ['Hugo']
@@ -67,7 +67,16 @@ Static website engine 静态网站引擎，就是通过模版选择和自己的�
     最重要的一个文件夹是`content/post`文件夹，这里存放了我们要发的内容。每个文章对应一个文件夹，文章的内容书写在该文件夹下的`index.md`文件中。如果要新建一个文章，我们也需要在post文件夹下新建一个任意名称的文件夹，和index.md文件（有的主题是不需要用`index`去命名文件，但是stack这个主题是需要的）
     每个index.md文件有两个部分组成：
     1. 两个`---`之间的是该文章的页面参数，包括标题，发表日期等等。完整的参数列表可以看[Front Matter](https://olowolo.com/post/hugo-quick-start/#front-matter)。
-    2. 正文部分，完全按照markdown的语法规则书写，最终渲染结果根据选择的主题不同的不同。如果不熟悉markdown语法的，可以参考[Hugo对Markdown支持情况测试](https://edward852.github.io/post/markdown支持情况测试/)。可以在hello-world文件夹下的index.md尝试着做一下修改，比如title，tags等（输入`hugo serve`后博客会一直在本地运行，每次修改的保存都会实时更新在[http://127.0.0.1:1313](http://127.0.0.1:1313) ）
+    2. 正文部分，完全按照markdown的语法规则书写，最终渲染结果根据选择的主题不同的不同。如果不熟悉markdown语法的，可以参考[Hugo对Markdown支持情况测试](https://edward852.github.io/post/markdown支持情况测试/)。可以在hello-world文件夹下的index.md尝试着做一下修改，比如title，tags等（输入`hugo serve`后博客会一直在本地运行，每次修改的保存都会实时更新在[http://127.0.0.1:1313](http://127.0.0.1:1313) ）  
+    文章修改完成后，使用git push即可，vercel会自动部署最新的内容。
+{{< details "push的步骤" >}}
+```
+git add .
+git commit -m 'some message here'
+git push
+
+```
+{{< /details >}}
 
 
 * 新建分类和标签
@@ -76,7 +85,8 @@ Static website engine 静态网站引擎，就是通过模版选择和自己的�
     这个标签有一个单独的标签页，就一定要有`content/tags/Hugo/_index.md`这个文件，标签的封面图放在`Hugo`文件夹下即可
 
 
-## 可是我想加个蛋：先加上会更好的改善
+## 可是我想加个蛋：加上会更好的改善
+模版提供了最基本功能，对于写博客来说已经完全够用了！如果你希望给自己的博客进行一些装修，功能的添加，下面这部分内容应该会帮到你～
 ### 修改模版的规则
 我这里先假设目前你的文件结构和内容和[hugo-theme-stack-starter](https://github.com/CaiJimmy/hugo-theme-stack-starter)模版中的是一模一样。因为是从模版搭建，所以目前我们还没有现成可以去修改的文档。我们需要新建正确的文件夹和正确的文件名才能修改到想修改的地方，比如页脚。我的做法是：
     1. 切换到当前博客的根目录下输入`git submodule add https://github.com/whuwangyong/hugo-theme-stack/ themes/hugo-theme-stack`，下载完后会出现一个`/themes/hugo-theme-stack`文件夹
@@ -86,7 +96,6 @@ Static website engine 静态网站引擎，就是通过模版选择和自己的�
 ### 页脚添加运行时间，访问人次和发表文字数
 我是按照第三夏尔的[“博客已运行x天x小时x分钟”字样](https://thirdshire.com/post/hugo-stack-renovation/#博客已运行x天x小时x分钟字样)和[总字数统计：“发表了x篇文章，共计x字”](https://thirdshire.com/post/hugo-stack-renovation/#总字数统计发表了x篇文章共计x字)来给页脚添加运行时间和发表文章数。
 
-
 ### 谷歌分析和页面访问统计
 参考Amuro Peng的[Hugo的搭建与使用](http://www.amuro.top/other/hugo/)，开通[谷歌分析](https://marketingplatform.google.com/about/analytics/)，并在其中新增一个账号和应用，获取该应用的追踪ID。
 1. 在`confid/_defult/config.toml`中添加`googleAnalytics = "G-XXXXX（你的追踪ID）"`
@@ -95,7 +104,6 @@ Static website engine 静态网站引擎，就是通过模版选择和自己的�
     <!-- 添加谷歌分析插件Google Analytics -->
     {{ template "_internal/google_analytics.html" . }}
     ```
-
 ### 添加评论 
 参考[Waline快速上手](https://waline.js.org/guide/get-started/#leancloud-设置-数据库)配置好LeanCloud和Vercel后，在`confid/_defult/params.toml`中添加
 ```
@@ -105,7 +113,7 @@ provider = "waline"
 
 
 [comments.waline]
-serverURL = "https://blog-comments-murc60bpk-callmel.vercel.app"
+serverURL = "你自己vercel app的访问链接"
 lang = "zh-CN"
 visitor = true
 avatar = ""
@@ -116,12 +124,14 @@ DISABLE_REGION = true
 DISABLE_USERAGENT = true
 
 [comments.waline.locale]
-admin = "潮潮"
+admin = "your name"
 ```
 ### 可搜索
 完全参考[让Google搜索到自己的博客](https://zoharandroid.github.io/2019-08-03-让谷歌搜索到自己的博客/)
 
 ### 相册
+完全参考[Hugo博客添加相册功能](https://www.sulvblog.cn/posts/blog/hugo_gallery/)
+
 ## 参考链接
 [“博客已运行x天x小时x分钟”字样](https://thirdshire.com/post/hugo-stack-renovation/#博客已运行x天x小时x分钟字样)
 
