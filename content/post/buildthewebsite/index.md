@@ -17,7 +17,7 @@ tags: ['Hugo']
 
 最终搭建出来的网站效果类似于我现在的博客预览效果（时间截止至2023.09.04）。使用的主题是[hugo-theme-stack](https://github.com/CaiJimmy/hugo-theme-stack)。 其他主题可以到[Hugo Themes](https://themes.gohugo.io)中挑选下载，不过不一定适用本文的第一和第二章节。可以直接谷歌搜索`主题名+Hugo教程`自行参考搭建。
 
-P.S. ~~因为懒~~ 我会尽量文字描述清楚，就不放截图了（甚至懒得找封面图）。以及本教程默认你已经知道最基本的[命令行/终端的使用](https://www.freecodecamp.org/chinese/news/command-line-for-beginners/)。
+P.S. ~~因为懒~~ 我会尽量文字描述清楚，就不放截图了（甚至懒得找封面图）。以及本教程默认你已经知道最基本的[命令行/终端的使用](https://www.freecodecamp.org/chinese/news/command-line-for-beginners/)。如果遇到问题欢迎在评论区提出或者到长毛象私信我😙
 
 
 ## 去超市买泡面：Github以及本地操作
