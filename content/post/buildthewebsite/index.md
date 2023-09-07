@@ -16,6 +16,7 @@ tags: ['Hugo']
 互联网上关于如何搭建部署Hugo网站的教程非常多，我自己踩过了一些坑之后把最快的部署步骤总结了出来。毕竟越快部署一个美观的网站就能越快开始做博客的真正目的--写作！  
 
 最终搭建出来的网站效果类似于我现在的博客预览效果（时间截止至2023.09.04）。使用的主题是[hugo-theme-stack](https://github.com/CaiJimmy/hugo-theme-stack)。 其他主题可以到[Hugo Themes](https://themes.gohugo.io)中挑选下载，不过不一定适用本文的第一和第二章节。可以直接谷歌搜索`主题名+Hugo教程`自行参考搭建。
+
 P.S. ~~因为懒~~ 我会尽量文字描述清楚，就不放截图了（甚至懒得找封面图）。以及本教程默认你已经知道最基本的[命令行/终端的使用](https://www.freecodecamp.org/chinese/news/command-line-for-beginners/)。
 
 
@@ -52,31 +53,32 @@ P.S. ~~因为懒~~ 我会尽量文字描述清楚，就不放截图了（甚至�
 
 ## 拿起叉子吧：最基本的使用规则
 
-好了一切已经准备就绪！首先让我们在博客的根目录运行`hugo serve`，到[http://127.0.0.1:1313](http://127.0.0.1:1313)可以到处点点看看！
-~~等泡面泡好的时间里，~~ 我们可以来先看一下一直在说的Hugo到底是什么。根据[官方的文档](https://gohugo.io/documentation/)：<u>Hugo is the world’s fastest static website engine. It’s written in Go (aka Golang).<u> Static website engine 静态网站引擎，就是通过模版选择和自己的配置，生成静态网页的工具。
-我们利用这个引擎，不用从零开始一个一个去写CSS和HTML文件，而是直接用别人配置好的东西去填充页面。
+好了一切已经准备就绪！首先让我们在博客的根目录运行`hugo serve`，到[http://127.0.0.1:1313](http://127.0.0.1:1313)可以到处点点看看！  
+
+~~等泡面泡好的时间里，~~ 我们可以来先看一下一直在说的Hugo到底是什么。根据[官方的文档](https://gohugo.io/documentation/)：<u>Hugo is the world’s fastest static website engine. It’s written in Go (aka Golang).<u> 
+我们利用这个静态网站引擎，不用从零开始一个一个去写CSS和HTML文件，而是直接用别人配置好的东西去填充页面。
 相当于比起自己从买菜切菜杆面来做一碗面，我们直接从从超市里选了别人调配好的方便面，只需要根据自己的喜好去加减调料。
-网络上有许多教程，推荐先去阅读[Hugo 从入门到会用](https://olowolo.com/post/hugo-quick-start/#%E5%BC%80%E5%A7%8B%E5%86%99%E4%BD%9C)，以了解基本的文件组织结构。
+推荐先去阅读[Hugo 从入门到会用](https://olowolo.com/post/hugo-quick-start/#%E5%BC%80%E5%A7%8B%E5%86%99%E4%BD%9C)，以了解基本的文件组织结构。
 
 接下来我们需要让这个博客看上去是自己的，取个自己喜欢的博客名也是很重要滴！推荐使用[VS Code](https://code.visualstudio.com)进行编辑。
 
 * 站名，简介等修改
 
-    为了让这个博客，需要 `config/_default/config.toml`文件中修改站名，将默认语言换成中文（languageCode和defaultContentLanguage赋值为`zh-cn`）。然后再去 `config/_default/params.toml`中修改favicon，footer，sidebar等信息。
+    在 `config/_default/config.toml`文件中修改站名（title变量自定义），将默认语言换成中文（languageCode和defaultContentLanguage赋值为`zh-cn`）。然后再去 `config/_default/params.toml`中修改favicon，footer，sidebar等信息。config文件夹下的文件不多，推荐每个从头到尾看一遍看自己有没有需要修改的。
 
 * 新建和编辑文章
 
-    最重要的一个文件夹是`content/post`文件夹，这里存放了我们要发的文章。每个文章对应一个文件夹，文章的内容书写在该文件夹下的`index.md`文件中。如果要新建一个文章，我们也需要在post文件夹下新建一个任意名称的文件夹，和index.md文件（有的主题是不需要用`index`去命名文件，但是stack这个主题是需要的。可以用命令 `hugo new content/post/onepost/index.md`来快捷操作）
+    最重要的一个文件夹是`content/post`文件夹，这里存放了我们要发的文章。每个文章对应一个文件夹，文章的内容书写在该文件夹下的`index.md`文件中。如果要新建一个文章，我们也需要在post文件夹下新建一个任意名称的文件夹，和index.md文件（有的主题是不需要用`index`去命名文件，但是stack这个主题是需要的。可以用命令 `hugo new content/post/onepost/index.md`来快捷操作）。  
     每个index.md文件有两个部分组成：
     1. 两个`---`之间的是该文章的页面参数，包括标题，发表日期等等。完整的参数列表请阅读[Front Matter](https://olowolo.com/post/hugo-quick-start/#front-matter)。
     2. 正文部分，完全按照markdown的语法规则书写，最终渲染结果根据选择的主题不同而不同。如果不熟悉markdown语法的，可以参考[Hugo对Markdown支持情况测试](https://edward852.github.io/post/markdown支持情况测试/)，在hello-world文件夹下的index.md尝试着做一下修改，比如title，tags等（输入`hugo serve`后博客会一直在本地运行，每次修改的保存都会实时更新在[http://127.0.0.1:1313](http://127.0.0.1:1313) ）  
 
-    文章修改完成后，使用git push即可，vercel会自动部署最新的内容。
+    文章修改完成后，使用`git push`即可，vercel会自动部署最新的内容。
 
 {{< details "push的步骤" >}}
 ```
 git add .
-git commit -m 'some message here'
+git commit -m 'some notes here'
 git push
 
 ```
