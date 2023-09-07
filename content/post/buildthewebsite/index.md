@@ -1,6 +1,7 @@
 ---
-title: "如何利用Hugo部署一个博客，比泡好杯面还快"
-description: 利用Stack主题的模版部署
+title: "利用Hugo Stack快速部署一个博客"
+slug: "Build-A-Blog-With-Hugo"
+description: 比泡好杯面还快
 date: 2023-09-04T17:59:10+08:00
 image: 
 math: 
@@ -15,12 +16,13 @@ tags: ['Hugo']
 互联网上关于如何搭建部署Hugo网站的教程非常多，我自己踩过了一些坑之后把最快的部署步骤总结了出来。毕竟越快部署一个美观的网站就能越快开始做博客的真正目的--写作！  
 
 最终搭建出来的网站效果类似于我现在的博客预览效果（时间截止至2023.09.04）。使用的主题是[hugo-theme-stack](https://github.com/CaiJimmy/hugo-theme-stack)。 其他主题可以到[Hugo Themes](https://themes.gohugo.io)中挑选下载，不过不一定适用本文的第一和第二章节。可以直接谷歌搜索`主题名+Hugo教程`自行参考搭建。
-P.S. ~~因为懒~~ 我会尽量文字描述清楚，就不放截图了。
+P.S. ~~因为懒~~ 我会尽量文字描述清楚，就不放截图了（甚至懒得找封面图）。以及本教程默认你已经知道最基本的[命令行/终端的使用](https://www.freecodecamp.org/chinese/news/command-line-for-beginners/)。
+
 
 ## 去超市买泡面：Github以及本地操作
 首先需要取得我们博客的雏形，你需要一个可以访问**完全互联网**的电脑，以及一个[Github](https://github.com)账号。  
 
-0. 在电脑上安装hugo：在终端输入`brew install hugo`。或者在[HUGO|Installation](https://gohugo.io/installation/)中下载自己电脑对应的安装包。
+0. 在电脑上安装hugo：如果系统是macOS，在终端输入`brew install hugo`即可。其他操作系统请在[HUGO|Installation](https://gohugo.io/installation/)中下载自己电脑对应的安装包，并按照对应的教程安装。
 1. 打开[hugo-theme-stack-starter](https://github.com/CaiJimmy/hugo-theme-stack-starter)。选择绿色的<p class="greenbutton">Use this template</p>按钮，跳转到新页面之后自定义项目名称，选择保存。  
 2. 在自己的这个项目里复制项目的https或者ssh链接，用`git clone`命令克隆到本地。  
 3. 在下载的文件夹根目录下打开终端/命令行，输入`hugo server`开始运行网站。在浏览器输入[http://127.0.0.1:1313](http://127.0.0.1:1313)就可以浏览示例网站，和[Stack主题的demo网站](demo.stack.jimmycai.com)应该是一模一样的。
@@ -40,7 +42,7 @@ P.S. ~~因为懒~~ 我会尽量文字描述清楚，就不放截图了。
 
 ## 用漂亮的碗装泡面：添加自己的域名
 根据小球飞鱼这篇[Hugo | 为 Blog 添加自定义域名](https://mantyke.icu/posts/2021/7e64c334/)里的推荐，我在[Dynadot](https://www.dynadot.com)购买了自己的域名。
-选择好心仪的域名购买好后就可以在vercel上修改博客的链接了。
+选择好心仪的域名购买好后，就可以修改博客的链接了。
 1. 在Dynadot的My Domain页面配置DNS：假设你购买的域名是abc.com。
 你想让abc.com作为你博客的访问链接，就在Domain Record中新增record，然后选择Record Type为`CNAME`，IP Address or Target Host输入`cname.vercel-dns.com`。
 如果你想让subdomain.abc.com作为你博客的访问链接（比如blog.abc.com），就在下方的Subdomain Records 中新增record，subdomain填写`blog`,然后选择Record Type为`CNAME`，IP Address or Target Host输入`cname.vercel-dns.com`。
@@ -56,10 +58,11 @@ P.S. ~~因为懒~~ 我会尽量文字描述清楚，就不放截图了。
 相当于比起自己从买菜切菜杆面来做一碗面，我们直接从从超市里选了别人调配好的方便面，只需要根据自己的喜好去加减调料。
 网络上有许多教程，推荐先去阅读[Hugo 从入门到会用](https://olowolo.com/post/hugo-quick-start/#%E5%BC%80%E5%A7%8B%E5%86%99%E4%BD%9C)，以了解基本的文件组织结构。
 
+接下来我们需要让这个博客看上去是自己的，取个自己喜欢的博客名也是很重要滴！推荐使用[VS Code](https://code.visualstudio.com)进行编辑。
 
 * 站名，简介等修改
 
-    为了让这个博客看上去是你自己的，需要 `config/_default/config.toml`文件中修改站名，将默认语言换成中文（languageCode和defaultContentLanguage赋值为`zh-cn`）。然后再去 `config/_default/params.toml`中修改favicon，footer，sidebar等信息。
+    为了让这个博客，需要 `config/_default/config.toml`文件中修改站名，将默认语言换成中文（languageCode和defaultContentLanguage赋值为`zh-cn`）。然后再去 `config/_default/params.toml`中修改favicon，footer，sidebar等信息。
 
 * 新建和编辑文章
 
@@ -67,7 +70,9 @@ P.S. ~~因为懒~~ 我会尽量文字描述清楚，就不放截图了。
     每个index.md文件有两个部分组成：
     1. 两个`---`之间的是该文章的页面参数，包括标题，发表日期等等。完整的参数列表请阅读[Front Matter](https://olowolo.com/post/hugo-quick-start/#front-matter)。
     2. 正文部分，完全按照markdown的语法规则书写，最终渲染结果根据选择的主题不同而不同。如果不熟悉markdown语法的，可以参考[Hugo对Markdown支持情况测试](https://edward852.github.io/post/markdown支持情况测试/)，在hello-world文件夹下的index.md尝试着做一下修改，比如title，tags等（输入`hugo serve`后博客会一直在本地运行，每次修改的保存都会实时更新在[http://127.0.0.1:1313](http://127.0.0.1:1313) ）  
+
     文章修改完成后，使用git push即可，vercel会自动部署最新的内容。
+
 {{< details "push的步骤" >}}
 ```
 git add .
