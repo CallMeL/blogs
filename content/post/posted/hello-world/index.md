@@ -9,7 +9,7 @@ categories:
 # tags: ['又在看黄','干点本行','吃点好的','多读本书','没有相机','自己动手']
 
   
-weight: 1       # You can add weight to some posts to override the default sorting (date descending)
+# weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 ## 关于名字
 博客的名字是**潮边**，是我动森岛屿的名字。取潮字是因为和我名字里的一个字对应，加上边是觉得顺口又有意境。越看越喜欢。

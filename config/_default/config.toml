@@ -22,6 +22,10 @@ disqusShortname = "hugo-theme-stack"
   page_view_conter = true
   favicon = "/fav.jpeg"
 
+enableGitInfo = true
+[frontmatter]
+  lastmod = [':git',':fileModTime', ':default']
+
 
   
 

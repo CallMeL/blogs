@@ -11,6 +11,8 @@ comments: true
 draft: false
 categories:
     - 经验分享
+tags: ['German']
+
 ---
 之前发布在notion上的一篇经验分享，搬移到本博客来。  
 
