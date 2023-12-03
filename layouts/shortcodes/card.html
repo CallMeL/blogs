@@ -1,0 +1,129 @@
+{{ $imageWidth := .Get "imageWidth" | default "150px" }}
+{{ $borderColor := .Get "borderColor" | default "#ccc" }}
+
+{{ $imgURL1 := .Get "image1" }}
+{{ $altText1 := .Get "alt1" }}
+{{ $imageText1 := .Get "imageText1" | markdownify }}
+{{ $additionalText1 := .Get "additionalText1" | markdownify }}
+{{ $scores1 := .Get "scores1" | default "⭐️" }}
+{{ $type1 := .Get "type1" | default "百合" }}
+{{ $author1 := .Get "author1" | default "作者" }}
+
+{{ $imgURL2 := .Get "image2" }}
+{{ $altText2 := .Get "alt2" }}
+{{ $imageText2 := .Get "imageText2" | markdownify }}
+{{ $additionalText2 := .Get "additionalText2" | markdownify }}
+{{ $scores2 := .Get "scores2" | default "⭐️" }}
+{{ $type2 := .Get "type2" | default "百合" }}
+{{ $author2 := .Get "author2" | default "作者" }}
+
+<div class="card-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="image-container">
+                <img src="{{ $imgURL1 }}" alt="{{ $altText1 }}" class="card-image">
+            </div>
+            <div class="text-container">
+                <div class="text-content">
+                    <div class="imageText" id="imageText1">{{ $imageText1 }}</div>
+                    <div class="scores">{{ $scores1 }}</div>
+                    <div class="type">类型：{{ $type1 }}</div>
+                    <div class="author">作者：{{ $author1 }}</div>
+                    <div class="additionalText" id="additionalText1">{{ $additionalText1 }}</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <div class="image-container">
+                <img src="{{ $imgURL2 }}" alt="{{ $altText2 }}" class="card-image">
+            </div>
+            <div class="text-container">
+                <div class="text-content">
+                    <div class="imageText" id="imageText2">{{ $imageText2 }}</div>
+                    <div class="scores">{{ $scores2 }}</div>
+                    <div class="type">类型：{{ $type2 }}</div>
+                    <div class="author">作者：{{ $author2 }}</div>
+                    <div class="additionalText" id="additionalText2">{{ $additionalText2 }}</div>
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .imageText{
+        font-size: x-large;
+        font-weight: bold;
+    }
+
+    .card {
+        border: 2px solid {{ $borderColor }};
+        border-radius: 5px;
+        padding: 15px;
+        width: 50%;
+        box-sizing: border-box;
+    }
+
+    .card-content {
+        display: flex;
+        align-items: center;
+    }
+
+    .image-container {
+        flex: 0 0 {{ $imageWidth }};
+        margin-right: 20px;
+    }
+
+    .text-container {
+        flex: 1;
+    }
+
+    .card-image {
+        width: 100%;
+        max-width: {{ $imageWidth }};
+        border-radius: 5px;
+    }
+
+    .text-content {
+        margin-bottom: 10px;
+    }
+
+    .divider {
+        border-top: 1px solid {{ $borderColor }};
+        margin: 10px 0;
+    }
+
+    @media (max-width: 768px) {
+        .card-container {
+            flex-direction: column;
+        }
+
+        .card {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-container {
+            margin-bottom: 10px;
+        }
+    }
+</style>

@@ -26,6 +26,8 @@ enableGitInfo = true
 [frontmatter]
   lastmod = [':git',':fileModTime', ':default']
 
+  
+
 
   
 
