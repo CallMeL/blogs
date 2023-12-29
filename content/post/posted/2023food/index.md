@@ -1,5 +1,6 @@
 ---
 title: "2023年度总结（食物篇）"
+slug: "2023-food"
 description: 感谢和我一起吃过饭的朋友们，以后也要一起吃饭！
 date: 2023-12-29T10:37:17+01:00
 image: Cover.JPG
