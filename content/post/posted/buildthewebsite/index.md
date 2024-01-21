@@ -24,9 +24,10 @@ P.S. ~~因为懒~~ 我会尽量文字描述清楚，就不放截图了（甚至�
 首先需要取得我们博客的雏形，你需要一个可以访问**完全互联网**的电脑，以及一个[Github](https://github.com)账号。  
 
 0. 在电脑上安装hugo：如果系统是macOS，在终端输入`brew install hugo`即可。其他操作系统请在[HUGO|Installation](https://gohugo.io/installation/)中下载自己电脑对应的安装包，并按照对应的教程安装。
-1. 打开[hugo-theme-stack-starter](https://github.com/CaiJimmy/hugo-theme-stack-starter)。选择绿色的<p class="greenbutton">Use this template</p>按钮，跳转到新页面之后自定义项目名称，选择保存。  
-2. 在自己的这个项目里复制项目的https或者ssh链接，用`git clone`命令克隆到本地。  
-3. 在下载的文件夹根目录下打开终端/命令行，输入`hugo server`开始运行网站。在浏览器输入[http://127.0.0.1:1313](http://127.0.0.1:1313)就可以浏览示例网站，和[Stack主题的demo网站](demo.stack.jimmycai.com)应该是一模一样的。
+1. (21.01.2024更新) 我在新的电脑上运行hugo时还发现go也是必须安装的，在终端输入`brew install golang`即可，不需要去官网下载安装包。
+2. 打开[hugo-theme-stack-starter](https://github.com/CaiJimmy/hugo-theme-stack-starter)。选择绿色的<p class="greenbutton">Use this template</p>按钮，跳转到新页面之后自定义项目名称，选择保存。  
+3. 在自己的这个项目里复制项目的https或者ssh链接，用`git clone`命令克隆到本地。  
+4. 在下载的文件夹根目录下打开终端/命令行，输入`hugo server`开始运行网站。在浏览器输入[http://127.0.0.1:1313](http://127.0.0.1:1313)就可以浏览示例网站，和[Stack主题的demo网站](demo.stack.jimmycai.com)应该是一模一样的。
 
 至此如果没有任何报错，那么恭喜你，再点几下鼠标你的博客就可以发布了。
 

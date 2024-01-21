@@ -4,6 +4,8 @@ slug: "2023-food"
 description: 感谢和我一起吃过饭的朋友们，以后也要一起吃饭！
 date: 2023-12-29T10:37:17+01:00
 image: Cover.JPG
+categories:
+    - 年度总结
 math: 
 license: 
 comments: true
