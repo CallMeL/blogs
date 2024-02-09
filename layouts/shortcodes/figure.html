@@ -1,0 +1,23 @@
+{{- if .Get 4 -}}
+<figure>
+  <img loading='lazy' decoding="async" src="{{ .Get 0 | safeURL }}" width="24%" style="border-radius: 10px;"/><img loading='lazy' decoding="async" src="{{ .Get 1 | safeURL }}" width="24%" style="border-radius: 10px;"/><img loading='lazy' decoding="async" src="{{ .Get 2 | safeURL }}" width="24%" style="border-radius: 10px;"/><img loading='lazy' decoding="async" src="{{ .Get 3 | safeURL }}" width="24%" style="border-radius: 10px;"/>
+  <figcaption>{{ .Get 4 | markdownify }}</figcaption>
+</figure>
+{{- else if .Get 3 -}}
+<figure>
+  <img loading='lazy' decoding="async" src="{{ .Get 0 | safeURL }}" width="33%" style="border-radius: 10px;"/><img loading='lazy' decoding="async" src="{{ .Get 1 | safeURL }}" width="33%" style="border-radius: 10px;"/><img loading='lazy' decoding="async" src="{{ .Get 2 | safeURL }}" width="33%" style="border-radius: 10px;"/>
+  <figcaption>{{ .Get 3 | markdownify }}</figcaption>
+</figure>
+{{- else if .Get 2 -}}
+<figure>
+  <img loading='lazy' decoding="async" src="{{ .Get 0 | safeURL }}" width="50%" style="border-radius: 10px;"/><img loading='lazy' decoding="async" src="{{ .Get 1 | safeURL }}" width="50%" style="border-radius: 10px;"/>
+  <figcaption>{{ .Get 2 | markdownify }}</figcaption>
+</figure>
+{{- else -}}
+<figure  style="max-width: 90%; margin-left: 5%; margin-right: 5%;">
+  <img loading='lazy' decoding="async" src="{{ .Get 0 | safeURL }}" style="border-radius: 10px;"/>
+  {{- if .Get 1 -}}
+  <figcaption>{{ .Get 1 | markdownify }}</figcaption>
+  {{- end -}}
+</figure>
+{{ end }}
