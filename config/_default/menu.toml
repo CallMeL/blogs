@@ -23,3 +23,11 @@ url = "https://o3o.ca/@staytonight"
 [social.params]
 icon = "brand-mastodon"
 
+[[social]]
+identifier = "photos"
+name = "Photos"
+url = "https://photo.hannahlin.me"
+
+[social.params]
+icon = "camera-outline"
+
