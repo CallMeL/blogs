@@ -1,2 +1,13 @@
 [[imports]]
 path = "github.com/CaiJimmy/hugo-theme-stack/v4"
+
+[[module.mounts]]
+source = "content/english"
+target = "content"
+lang = "en"
+
+[[module.mounts]]
+source = "dist/documentation"
+target = "content"
+lang = "ch-zn"
+

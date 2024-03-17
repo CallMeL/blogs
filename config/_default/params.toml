@@ -4,8 +4,6 @@ mainSections = ["post"]
 rssFullContent = true
 favicon = "/fav.jpeg"
 
-
-
 [footer]
 since = 2023
 customText = ""
@@ -24,7 +22,7 @@ local = true
 src = "img/avatar.jpeg"
 
 [article]
-math = false
+math = true
 readingTime = true
 
 [article.license]

@@ -2,20 +2,22 @@ baseurl: https://blog.hannahlin.me
 languageCode: zh-cn
 theme: hugo-theme-stack
 paginate: 5
-title: 潮边
 copyright: 潮潮
-
+defaultContentLanguage: zh-cn
+defaultContentLanguageInSubdir: true
 languages:
-    # en:
-    #     languageName: English
-    #     title: Example Site
-    #     weight: 1
-    #     params:
-    #         description: Example description
+    en:
+        languageName: English
+        title: hannah here
+        weight: 2
+        params:
+            sidebar:
+                subtitle: "Most write and think in Chinese"
+
     zh-cn:
         languageName: 中文
         title: 潮边
-        weight: 2
+        weight: 1
         params:
             description: 演示说明
 

@@ -41,7 +41,7 @@
             <div>
                 {{ partial "helper/icon" "clock" }}
                 <time class="article-time--reading">
-                    {{.WordCount }} 字
+                    {{.WordCount }} {{ T "article.unit"}} -
                     {{ T "article.readingTime" .ReadingTime }}
                 </time>
             </div>

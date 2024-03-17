@@ -26,7 +26,7 @@ icon = "brand-mastodon"
 [[social]]
 identifier = "photos"
 name = "Photos"
-url = "https://photo.hannahlin.me"
+url = "https://gallery.hannahlin.me"
 
 [social.params]
 icon = "camera-outline"
