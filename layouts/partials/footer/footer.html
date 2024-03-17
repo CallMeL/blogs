@@ -25,16 +25,16 @@
     <!-- Add blog running time -->
 <!-- Add blog running time -->
 <section class="myfooter">
-    已诞生 🎂
+    🎂 {{T "footer.born"}} :
 <span id="runningdays" class="myfooter"></span>
 </section>
 
 <span class="myfooter">
     <span id="busuanzi_container_site_pv" >
-        访问量 👀 <span id="busuanzi_value_site_pv"></span>
+        👀 {{T "footer.views"}} <span id="busuanzi_value_site_pv"></span>
     </span>
     <span id="busuanzi_container_site_uv">
-        · 访客数 🧶 <span id="busuanzi_value_site_uv"></span>
+        · {{T "footer.visitors"}}  <span id="busuanzi_value_site_uv"></span>
       </span>
 </span>
 
@@ -47,7 +47,7 @@
     {{ range (where .Site.Pages "Kind" "page" )}}
         {{$scratch.Add "total" .WordCount}}
     {{ end }}
-    发表文章 📝 {{ len (where .Site.RegularPages "Section" "post") }} · 
-    总字数 🖌 {{ div ($scratch.Get "total") 1000.0 | lang.FormatNumber 2 }}k
+    📝 {{T "footer.article"}}  {{ len (where .Site.RegularPages "Section" "post") }} · 
+    {{T "footer.words"}} {{ div ($scratch.Get "total") 1000.0 | lang.FormatNumber 2 }}k
 </section>
 </footer>

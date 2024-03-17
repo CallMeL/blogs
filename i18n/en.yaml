@@ -70,6 +70,22 @@ search:
 footer:
     builtWith:
         other: Built with {{ .Generator }}
-
+    day:
+        other: days
+    hour:
+        other: hours
+    min:
+        other: minutes
+    visitors:
+        other: Visitors
+    views:
+        other: Views
+    article:
+        one: Published Article
+        other: Published Articles
+    words:
+        other: Word count
     designedBy:
         other: Theme {{ .Theme }} designed by {{ .DesignedBy }}
+    born:
+        other: Already on line

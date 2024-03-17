@@ -55,8 +55,24 @@ search:
         other: "#PAGES_COUNT 个结果 （用时 #TIME_SECONDS 秒）"
 
 footer:
+    born:
+        other: 已诞生
+    day:
+        other: 天
+    hour:
+        other: 小时
+    min:
+        other: 分钟
+    visitors:
+        other: 访客数
+    views:
+        other: 访问量
+    article:
+        other: 发表文章
+    words:
+        other: 总字数
     builtWith:
         other: Built with {{ .Generator }}
-
     designedBy:
         other: 主题 {{ .Theme }} 由 {{ .DesignedBy }} 设计
+    

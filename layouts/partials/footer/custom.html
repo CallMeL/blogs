@@ -9,6 +9,6 @@
     let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
 
-    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    let result = days + {{T "footer.day"}} +" "+ hours + "{{T "footer.hour"}}"+" " + minutes + "{{T "footer.min"}}";
     document.getElementById('runningdays').innerHTML = result;
 </script>
