@@ -27,6 +27,8 @@ To debug some issues, you need to pause on a symbol that your source code doesnâ
 ## Assembly, Registers and Calling Convention
 
 Cover Photo by <a href="https://unsplash.com/@andreiamza2000?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Amza Andrei</a> on <a href="https://unsplash.com/photos/black-laptop-computer-turned-on-showing-music-player-Bss5nhYnLKU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-  
+
+## Reference  
 [1] [Setting breakpoints to pause your running app ](https://developer.apple.com/documentation/xcode/setting-breakpoints-to-pause-your-running-app
 [2] Excerpt From Advanced Apple Debugging
+[3] [How to trap on UIViewAlertForUnsatisfiableConstraints](https://stackoverflow.com/questions/26389273/how-to-trap-on-uiviewalertforunsatisfiableconstraints)
