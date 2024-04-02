@@ -1,7 +1,7 @@
 ---
 title: "不固定月记01"
 slug: "2024-01"
-description: 一月到二月初的总结
+description: 一月二月，跨年考试
 date: 2024-02-08T22:11:29+01:00
 image: cover.jpeg
 math: 

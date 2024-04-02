@@ -9,7 +9,7 @@ license:
 comments: true
 draft: false
 categories:
-    - 装修记录
+    - 经验分享
 tags: ['Hugo']
 ---
 
