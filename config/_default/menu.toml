@@ -10,7 +10,7 @@
 [[social]]
 identifier = "rss"
 name = "RSS"
-url = "https://blog.hannahlin.me/index.xml"
+url = "https://blog.hannahlin.me/zh-cn/index.xml"
 
 [social.params]
 icon = "rss"
