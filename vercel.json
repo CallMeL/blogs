@@ -1,0 +1,6 @@
+{
+    "redirects": [
+      { "source": "/p", "destination": "/zh-cn/p", "permanent": false },
+      { "source": "/index.xml", "destination": "/zh-cn/index.xml", "permanent": false }
+    ]
+  }
