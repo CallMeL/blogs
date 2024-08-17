@@ -35,8 +35,8 @@ draft: false
 ## 彩虹游行
 第一次举着牌子，披着彩虹旗，骄傲地，无需担心被和谐地上街。印象最深的是有好多老年人也在队伍里，好感动。包容的氛围让我觉得不管什么定义我都可以拥抱自己。举的牌子一面写着“爱最大，love makes us all equal，say no no to 中药“，另一面摘抄了《你的完美有点难懂并不代表世界不能包容》《玫瑰少年》和《you need to calm down》里的歌词。有生之年一定要去台湾参加一次全中文的彩虹游行。
 {{< galleries >}}
-{{< gallery src="./images/pride1.jpg" title="披上彩虹旗">}}
-{{< gallery src="./images/pride2.mov" title="边蹦边举牌子">}}
+{{< gallery src="./images/pride1.jpeg" title="披上彩虹旗">}}
+{{< gallery src="./images/pride2.jpeg" title="其他牌子">}}
 {{< /galleries >}}
 
 
