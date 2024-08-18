@@ -85,7 +85,12 @@ serverURL = "https://blog-comments-murc60bpk-callmel.vercel.app"
 lang = "zh-CN"
 visitor = true
 avatar = ""
-emoji = ["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"]
+emoji = [
+    "https://cdn.jsdelivr.net/gh/infinitesum/Twikoo-emoji@master/xiaodouni.json",
+    "https://cdn.jsdelivr.net/gh/infinitesum/Twikoo-emoji@master/neko.json",
+    "https://cdn.jsdelivr.net/gh/norevi/blob-emoji-for-waline@2.0/blobs-gif",
+    "https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"
+    ]
 requiredMeta = ["name", "email"]
 placeholder = ""
 DISABLE_REGION = true
