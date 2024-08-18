@@ -81,6 +81,7 @@ params:
             lang: zh-CN
             visitor: false
             emoji:
+                - https://cdn.jsdelivr.net/gh/norevi/blob-emoji-for-waline@2.0/blobs-gif
                 - https://unpkg.com/@waline/emojis@1.0.1/weibo
             requiredMeta:
                 - name
